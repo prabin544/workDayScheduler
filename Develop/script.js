@@ -26,8 +26,6 @@ $(document).ready(function() {
     });
 
     $(".saveBtn").on('click', function(){
-        $("textarea").each(function(){
-
         var text = ($(this).find(".description").val());
         // localStorage.setItem("description", description) ;
         console.log(text);
