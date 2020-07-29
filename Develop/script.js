@@ -24,6 +24,17 @@ $(document).ready(function() {
             task.addClass("future");
         }
     });
+
+    $(".saveBtn").on('click', function(){
+        $("textarea").each(function(){
+
+        var text = ($(this).find(".description").val());
+        // localStorage.setItem("description", description) ;
+        console.log(text);
+        })
+    });
+
+    
     
 });
 
