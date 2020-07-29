@@ -30,9 +30,6 @@ $(document).ready(function() {
         // localStorage.setItem("description", description) ;
         console.log(text);
         })
-    });
-
-    
     
 });
 
