@@ -1,12 +1,30 @@
 $(document).ready(function() {
-    // This line appends current date in #currentDay tag
+    
     const now = moment();
+    var currHour = now.format("hh A");
+    
     var currDate = moment().toString();
+
+    //Add current date and time in header
     $("#currentDay").append(currDate);
 
-    $(".col-3").append(now.format("hh:mm:ss A"));
-    console.log(now.format("hh:mm:ss A"));
+    var isFuture = false;
 
+    $(".row").each(function(){
+        var hour = ($(this).find(".hour").text());
+
+        var task = ($(this).find(".col-8"));
+
+        if (hour === currHour){
+            task.addClass("present");
+            isFuture = true;
+        }else if (!isFuture){
+            task.addClass("past");
+        }else{
+            task.addClass("future");
+        }
+    });
+    
 });
 
 
