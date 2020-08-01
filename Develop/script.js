@@ -1,3 +1,4 @@
+var time = 
 $(document).ready(function() {
     
     const now = moment();
@@ -26,9 +27,17 @@ $(document).ready(function() {
     });
 
     $(".saveBtn").on('click', function(){
-        var text = ($(this).find(".description").val());
+        var bt_id = $(this).attr("data-id");
+        var task = $("#" + bt_id).val();
+        console.log(task);
+
+        // var text = $(this).find(".description").val();
+        // console.log(text);
         // localStorage.setItem("description", description) ;
-        console.log(text);
+        // var time = $(".hour").text;
+        // console.log(time)
+        // localStorage.setItem(time, text);
+        // console.log(text);
         })
     
 });
