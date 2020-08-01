@@ -5,6 +5,7 @@ $(document).ready(function() {
     var currHour = now.format("hh A");
     
     var currDate = moment().toString();
+    var savedHour = $(".row")
 
     //Add current date and time in header
     $("#currentDay").append(currDate);
@@ -27,17 +28,9 @@ $(document).ready(function() {
     });
 
     $(".saveBtn").on('click', function(){
-        var bt_id = $(this).attr("data-id");
-        var task = $("#" + bt_id).val();
-        console.log(task);
-
-        // var text = $(this).find(".description").val();
-        // console.log(text);
-        // localStorage.setItem("description", description) ;
-        // var time = $(".hour").text;
-        // console.log(time)
-        // localStorage.setItem(time, text);
-        // console.log(text);
+        var saveBtn = $(this).attr("data-id");
+        var task = $("#" + saveBtn).val();
+        localStorage.setItem(saveBtn,task);
         })
     
 });
