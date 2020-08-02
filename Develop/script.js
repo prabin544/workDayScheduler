@@ -4,7 +4,7 @@ $(document).ready(function() {
     const now = moment();
     var currHour = now.format("hh A");
     
-    var currDate = moment().toString();
+    var currDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss a").toString();
     var savedHour = $(".row")
 
     //Add current date and time in header
@@ -29,8 +29,10 @@ $(document).ready(function() {
 
     $(".saveBtn").on('click', function(){
         var saveBtn = $(this).attr("data-id");
+        var clickedtime = ["09 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM","3 PM", "4 PM", "5 PM"];
+        var savedTime = clickedtime[saveBtn];
         var task = $("#" + saveBtn).val();
-        localStorage.setItem(saveBtn,task);
+        localStorage.setItem(savedTime,task);
         })
     
 });
