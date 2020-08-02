@@ -6,3 +6,4 @@
 # When user saves task, it can be viewed in local storage even after the pages are refreshed.
 # In Local storage, task are saved as hour and corresponding saved task.  
 # This app can be accessed at https://prabin544.github.io/workDayScheduler/.
+![Alt text](/Assets/initialPage.JPG?raw=true "Initial Page")
